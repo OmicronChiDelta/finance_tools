@@ -1,4 +1,5 @@
 # myapp.py
+#hello
 
 import sys
 if "E:\\mortgage" not in sys.path:
