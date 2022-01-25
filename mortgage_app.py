@@ -1,5 +1,6 @@
-# myapp.py
-#hello
+#https://stackoverflow.com/questions/41926478/python-bokeh-send-additional-parameters-to-widget-event-handler
+#https://stackoverflow.com/questions/65300681/clarification-on-bokehs-callback
+
 
 import sys
 if "E:\\finance_tools" not in sys.path:
@@ -11,10 +12,12 @@ from bokeh.layouts import column
 from bokeh.palettes import RdYlBu3
 from bokeh.plotting import figure, curdoc
 
+
+
+#%%
 #Variables
 max_term = 40
 max_p = 500000
-source = ColumnDataSource(data={'x':[], 'y':[]}) 
 
 #Plot area and styling
 p = figure(x_range=(0, max_term), y_range=(0, max_p), toolbar_location=None)
@@ -24,14 +27,23 @@ slide_term = Slider(start=10,     end=max_term, value=30,     step=1,    title="
 slide_fix  = Slider(start=0,      end=10,       value=5,      step=1,    title="Fixed-term length")
 slide_p    = Slider(start=100000, end=max_p,    value=208499, step=1,    title="Principal")
 
-i = 0
+#Compute graphic from defaults
+m = calc_min_payment(slide_p.value, slide_r.value, slide_term.value)
+month_ids = [i for i in range(12*slide_term.value)]
+frac_years = [i/12 for i in month_ids]
+t_min = [calc_balance(slide_p.value, slide_r.value, j, m) for j in month_ids]
 
+#Insert data into CDS
+source = ColumnDataSource(data={'x':frac_years, 'y':t_min}) 
+
+#Configure plot
 trajectory = p.line(x='x', y='y', line_width=2, source=source)
 ds = trajectory.data_source
 
-#%% Callback to recalculate repayment trajectory
+
+
+#%%Callback to recalculate repayment trajectory
 def callback(attr, old, new):
-    global i
         
     m = calc_min_payment(208499, new, 30)
     
@@ -41,12 +53,13 @@ def callback(attr, old, new):
     #Minimal payment
     t_min = [calc_balance(208499, new, j, m) for j in month_ids]
     
-    # BEST PRACTICE --- update .data in one step with a new dict
+    #Populate dictionary behind CDS with new data
     new_data = {'x':frac_years, 'y':t_min}
     ds.data = new_data
 
-    i = i + 1
 
+
+#%% Configure final plot
 slide_r.on_change('value', callback)
 #slide_term.on_change('value', callback)
 #slide_fix.on_change('value', callback)
