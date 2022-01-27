@@ -1,1 +1,1 @@
-bokeh serve --show E:\\finance_tools\\mortgage_app.py
+bokeh serve --show E:\\finance_tools\\app.py
