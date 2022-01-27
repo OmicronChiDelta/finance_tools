@@ -1,12 +1,8 @@
 #https://stackoverflow.com/questions/41926478/python-bokeh-send-additional-parameters-to-widget-event-handler
 #https://stackoverflow.com/questions/65300681/clarification-on-bokehs-callback
 
-
-
-from matplotlib.colors import rgb2hex, to_rgba
 from bokeh.models import Slider, ColumnDataSource, MultiLine, Plot
 from bokeh.layouts import column, row
-from bokeh.palettes import RdYlBu3
 from bokeh.plotting import figure, curdoc
 
 import sys
