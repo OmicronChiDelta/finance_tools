@@ -21,7 +21,6 @@ docker run -p 5006:5006 mortgage-assistant
 ## To do:
 - Interest calculator
 - Interest rate forecasting outside of fixed term
-- dockerfile
 
 ## Notes:
 Interest rate information obtained from publicly available datasets curated by the Bank of England
