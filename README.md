@@ -3,7 +3,7 @@
 End product will be a Bokeh-server hosted app, running within a Docker container to allow reproducible deployment on foreign machines.
 
 How to use:
-**Running the app in a docker container
+## Running the app in a docker container
 - Ensure you have Docker installed on your local machine
 - Clone this repository to <clone_path>
 - Open a powershell prompt and run the following commands:
