@@ -13,13 +13,13 @@ docker build mortgage-assistant
 
 - This will take a few minutes. Once the container is ready, run
 docker run -p 5006:5006 mortgage-assistant
-
 - Navigate to localhost:5006/app in your browser to use the application.
 
-To do:
+## To do:
 - Interest calculator
 - Interest rate forecasting outside of fixed term
 - dockerfile
 
+## Notes:
 Interest rate information obtained from publicly available datasets curated by the Bank of England
 https://www.bankofengland.co.uk/boeapps/database/fromshowcolumns.asp?Travel=NIxSTxTIxSUx&FromSeries=1&ToSeries=50&DAT=ALL&FNY=&CSVF=TT&html.x=146&html.y=37&C=EOF&C=NB2&C=EP6&Filter=N
