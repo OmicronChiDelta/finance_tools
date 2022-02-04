@@ -9,6 +9,7 @@ How to use:
 - Open a powershell prompt and run the following commands:
 
 cd <clone_path>
+
 docker build mortgage-assistant
 
 - This will take a few minutes. Once the container is ready, call
