@@ -4,19 +4,19 @@ End product will be a Bokeh-server hosted app, running within a Docker container
 
 How to use:
 ## Running the app in a docker container
-- Ensure you have Docker installed on your local machine
-- Clone this repository to <clone_path>
-- Open a powershell prompt and run the following commands:
+1. Ensure you have Docker installed on your local machine
+2. Clone this repository to <clone_path>
+3. Open a powershell prompt and run the following commands:
 
 cd <clone_path>
 
 docker build mortgage-assistant
 
-- This will take a few minutes. Once the container is ready, call
+4. This will take a few minutes. Once the container is ready, call
 
 docker run -p 5006:5006 mortgage-assistant
 
-- Finally, navigate to localhost:5006/app in your browser to use the application.
+5. Finally, navigate to localhost:5006/app in your browser to use the application.
 
 ## To do:
 - Interest calculator
