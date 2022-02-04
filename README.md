@@ -1,6 +1,9 @@
 # finance_tools
+This application is designed to help users compare performance of various financial products. Currently, it's geared towards mortgages, but in future I plan to extent it to investment strategies too. The objective is to help users better understand the long term financial impact of decisions such as:
+- Should I overpay my mortgage, invest, or strike a balance?
+- Once my fixed-rate deal expires, how quickly am I likely to repay under the expected variable rate?
 
-End product will be a Bokeh-server hosted app, running within a Docker container to allow reproducible deployment on foreign machines.
+From a technical perspective, it's been an exercise in creating reusable, reproducible web-apps, and gaining practice with Docker. 
 
 How to use:
 ## Running the app in a docker container
