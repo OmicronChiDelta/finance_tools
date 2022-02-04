@@ -8,10 +8,12 @@ How to use:
 - Clone this repository to <clone_path>
 - Open a powershell prompt and run the following commands:
 
+<span style="font-family: 'courier modern';">
 cd <clone_path>
 docker build mortgage-assistant
+</span>
 
-- This will take a few minutes. Once the container is ready, run
+- This will take a few minutes. Once the container is ready, call
 docker run -p 5006:5006 mortgage-assistant
 - Navigate to localhost:5006/app in your browser to use the application.
 
