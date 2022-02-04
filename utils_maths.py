@@ -41,7 +41,8 @@ if __name__ == "__main__":
     
     
     #%% Interest rate info
-    rates = pd.read_csv("E:\\finance_tools\\data\\variable_rates.csv")
+    # rates = pd.read_csv("E:\\finance_tools\\data\\variable_rates.csv")
+    rates = pd.read_csv(".\\data\\variable_rates.csv")
     rates["Date"] = pd.to_datetime(rates["Date"])
     rates.sort_values(by="Date", ascending=True, inplace=True)
     rates.reset_index(drop=True, inplace=True)

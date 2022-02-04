@@ -4,9 +4,10 @@ Created on Sat Jan 22 10:47:01 2022
 
 @author: Alex White
 """
-import sys
-if "E:\\finance_tools" not in sys.path:
-    sys.path.append("E:\\finance_tools")
+#PREP FOR DOCKER FILE - use path manager instead
+# import sys
+# if "E:\\finance_tools" not in sys.path:
+#     sys.path.append("E:\\finance_tools")
 from utils_maths import calc_min_payment, calc_balance
 
 from matplotlib.colors import rgb2hex, to_rgba
